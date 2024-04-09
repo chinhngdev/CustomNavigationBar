@@ -12,7 +12,6 @@ struct CustomNavBarContainerView<Content: View>: View {
     let content: Content
     @State private var showBackButton: Bool = true
     @State private var title: String = ""
-    @State private var subtitle: String? = nil
 
     init(@ViewBuilder content: () -> Content) {
         self.content = content()
@@ -20,15 +19,19 @@ struct CustomNavBarContainerView<Content: View>: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            CustomNavBarView(showBackButton: showBackButton, title: title, subtitle: subtitle)
+            CustomNavBarView(showBackButton: showBackButton, title: title, showTrailingButton: true) {
+                Button(action: {
+                }, label: {
+                    Text("Edit")
+                        .font(.title)
+
+                })
+            }
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .onPreferenceChange(CustomNavBarTitlePreferenceKey.self, perform: { value in
             self.title = value
-        })
-        .onPreferenceChange(CustomNavBarSubtitlePreferenceKey.self, perform: { value in
-            self.subtitle = value
         })
         .onPreferenceChange(CustomNavBarBackButtonHiddenPreferenceKey.self, perform: { value in
             self.showBackButton = !value
@@ -40,10 +43,7 @@ struct CustomNavBarContainerView<Content: View>: View {
     CustomNavBarContainerView {
         ZStack {
             Color.green.ignoresSafeArea()
-            Text("Hello world")
-                .foregroundColor(.white)
                 .customNavigationTitle("New title")
-                .customNavigationSubtitle("subtitle")
                 .customNavigationBarBackButtonHidden(true)
         }
     }

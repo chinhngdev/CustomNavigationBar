@@ -7,29 +7,38 @@
 
 import SwiftUI
 
-struct CustomNavBarView: View {
+struct CustomNavBarView<TrailingButton: View>: View {
     @Environment(\.presentationMode) var presentationMode
     let showBackButton: Bool
     let title: String
-    let subtitle: String?
+    let showTrailingButton: Bool
+    let trailingButton: TrailingButton
+
+    init(
+        showBackButton: Bool,
+        title: String,
+        showTrailingButton: Bool,
+        @ViewBuilder trailingButton: () -> TrailingButton
+    ) {
+        self.showBackButton = showBackButton
+        self.title = title
+        self.showTrailingButton = showTrailingButton
+        self.trailingButton = trailingButton()
+    }
 
     var body: some View {
         HStack {
             if showBackButton {
                 backButton
             }
-            Spacer()
             titleSection
             Spacer()
-            if showBackButton {
-                backButton
-                    .opacity(0)
+            if showTrailingButton {
+                trailingButton
             }
         }
         .padding()
-        .accentColor(.white)
         .foregroundColor(.white)
-        .font(.headline)
         .background(
             Color.blue.ignoresSafeArea(edges: .top)
         )
@@ -42,26 +51,29 @@ extension CustomNavBarView {
             presentationMode.wrappedValue.dismiss()
         }, label: {
             Image(systemName: "chevron.left")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 24, height: 24)
         })
     }
 
     private var titleSection: some View {
-        VStack(spacing: 4) {
-            Text(title)
-                .font(.title)
-                .fontWeight(.semibold)
-            if let subtitle = subtitle {
-                Text(subtitle)
-            }
-        }
+        Text(title)
+            .font(.title)
     }
-
-
 }
 
 #Preview {
     VStack {
-        CustomNavBarView(showBackButton: true, title: "Title here", subtitle: "Subtitle goes here")
+        CustomNavBarView(showBackButton: true, title: "Title here", showTrailingButton: true) {
+            Button(action: {
+            }, label: {
+                Image(systemName: "plus")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 24, height: 24)
+            })
+        }
         Spacer()
     }
 }
