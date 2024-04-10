@@ -1,13 +1,13 @@
 //
-//  CustomNavBarContainerView.swift
-//  CustomNavigationBar
+//  GTNavigationBarContainerView.swift
+//  GTNavigationBar
 //
 //  Created by ChinhNT on 9/4/24.
 //
 
 import SwiftUI
 
-struct CustomNavBarContainerView<Content: View>: View {
+struct GTNavigationBarContainerView<Content: View>: View {
 
     let content: Content
     @State private var showBackButton: Bool = true
@@ -19,28 +19,29 @@ struct CustomNavBarContainerView<Content: View>: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            CustomNavBarView(showBackButton: showBackButton, title: title, showTrailingButton: true) {
-                Button(action: {
-                }, label: {
+            GTNavBarView(showBackButton: showBackButton, title: title, showTrailingButton: true) {
+                NavigationLink {
+                    ContentView()
+                } label: {
                     Text("Edit")
                         .font(.title)
+                }
 
-                })
             }
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .onPreferenceChange(CustomNavBarTitlePreferenceKey.self, perform: { value in
+        .onPreferenceChange(GTNavBarTitlePreferenceKey.self, perform: { value in
             self.title = value
         })
-        .onPreferenceChange(CustomNavBarBackButtonHiddenPreferenceKey.self, perform: { value in
+        .onPreferenceChange(GTNavBarBackButtonHiddenPreferenceKey.self, perform: { value in
             self.showBackButton = !value
         })
     }
 }
 
 #Preview {
-    CustomNavBarContainerView {
+    GTNavigationBarContainerView {
         ZStack {
             Color.green.ignoresSafeArea()
                 .customNavigationTitle("New title")

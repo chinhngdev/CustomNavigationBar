@@ -1,6 +1,6 @@
 //
-//  CustomNavView.swift
-//  CustomNavigationBar
+//  GTNavigationView.swift
+//  GTNavigationBar
 //
 //  Created by ChinhNT on 9/4/24.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-struct CustomNavView<Content: View>: View {
+struct GTNavigationView<Content: View>: View {
 
     let content: Content
 
@@ -18,7 +18,7 @@ struct CustomNavView<Content: View>: View {
 
     var body: some View {
         NavigationView {
-            CustomNavBarContainerView {
+            GTNavigationBarContainerView {
                 content
             }
             .navigationBarHidden(true)
@@ -35,7 +35,7 @@ extension UINavigationController {
 }
 
 #Preview {
-    CustomNavView {
+    GTNavigationView {
         Color.red.ignoresSafeArea()
     }
 }

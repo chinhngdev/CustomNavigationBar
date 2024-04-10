@@ -11,7 +11,7 @@ import SwiftUI
 struct CustomNavigationBarApp: App {
     var body: some Scene {
         WindowGroup {
-            AppNavBarView()
+            ContentView()
         }
     }
 }

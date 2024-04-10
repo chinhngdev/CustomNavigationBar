@@ -10,12 +10,11 @@
 		EAC30F472BC4E7F400A3CB16 /* CustomNavigationBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F462BC4E7F400A3CB16 /* CustomNavigationBarApp.swift */; };
 		EAC30F4B2BC4E7F500A3CB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC30F4A2BC4E7F500A3CB16 /* Assets.xcassets */; };
 		EAC30F4E2BC4E7F500A3CB16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC30F4D2BC4E7F500A3CB16 /* Preview Assets.xcassets */; };
-		EAC30F562BC4E85900A3CB16 /* AppNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F552BC4E85900A3CB16 /* AppNavBarView.swift */; };
-		EAC30F582BC4ED1900A3CB16 /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F572BC4ED1900A3CB16 /* CustomNavBarView.swift */; };
-		EAC30F5A2BC4F30A00A3CB16 /* CustomNavBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F592BC4F30A00A3CB16 /* CustomNavBarContainerView.swift */; };
-		EAC30F5C2BC4F93E00A3CB16 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F5B2BC4F93E00A3CB16 /* CustomNavView.swift */; };
-		EAC30F5E2BC4FB9800A3CB16 /* CustomNavLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F5D2BC4FB9800A3CB16 /* CustomNavLink.swift */; };
-		EAC30F602BC5001500A3CB16 /* CustomNavBarPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F5F2BC5001500A3CB16 /* CustomNavBarPreferenceKeys.swift */; };
+		EAC30F582BC4ED1900A3CB16 /* GTNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F572BC4ED1900A3CB16 /* GTNavBarView.swift */; };
+		EAC30F5A2BC4F30A00A3CB16 /* GTNavigationBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F592BC4F30A00A3CB16 /* GTNavigationBarContainerView.swift */; };
+		EAC30F5C2BC4F93E00A3CB16 /* GTNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F5B2BC4F93E00A3CB16 /* GTNavigationView.swift */; };
+		EAC30F5E2BC4FB9800A3CB16 /* GTNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F5D2BC4FB9800A3CB16 /* GTNavigationLink.swift */; };
+		EAC30F602BC5001500A3CB16 /* GTNavBarPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F5F2BC5001500A3CB16 /* GTNavBarPreferenceKeys.swift */; };
 		EAC30F622BC5436200A3CB16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC30F612BC5436200A3CB16 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,12 +23,11 @@
 		EAC30F462BC4E7F400A3CB16 /* CustomNavigationBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarApp.swift; sourceTree = "<group>"; };
 		EAC30F4A2BC4E7F500A3CB16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAC30F4D2BC4E7F500A3CB16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EAC30F552BC4E85900A3CB16 /* AppNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavBarView.swift; sourceTree = "<group>"; };
-		EAC30F572BC4ED1900A3CB16 /* CustomNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
-		EAC30F592BC4F30A00A3CB16 /* CustomNavBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarContainerView.swift; sourceTree = "<group>"; };
-		EAC30F5B2BC4F93E00A3CB16 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
-		EAC30F5D2BC4FB9800A3CB16 /* CustomNavLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavLink.swift; sourceTree = "<group>"; };
-		EAC30F5F2BC5001500A3CB16 /* CustomNavBarPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarPreferenceKeys.swift; sourceTree = "<group>"; };
+		EAC30F572BC4ED1900A3CB16 /* GTNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTNavBarView.swift; sourceTree = "<group>"; };
+		EAC30F592BC4F30A00A3CB16 /* GTNavigationBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTNavigationBarContainerView.swift; sourceTree = "<group>"; };
+		EAC30F5B2BC4F93E00A3CB16 /* GTNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTNavigationView.swift; sourceTree = "<group>"; };
+		EAC30F5D2BC4FB9800A3CB16 /* GTNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTNavigationLink.swift; sourceTree = "<group>"; };
+		EAC30F5F2BC5001500A3CB16 /* GTNavBarPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTNavBarPreferenceKeys.swift; sourceTree = "<group>"; };
 		EAC30F612BC5436200A3CB16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +61,7 @@
 		EAC30F452BC4E7F400A3CB16 /* CustomNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				EAC30F542BC4E84600A3CB16 /* CustomNavBar */,
+				EAC30F542BC4E84600A3CB16 /* GTNavigationBar */,
 				EAC30F612BC5436200A3CB16 /* ContentView.swift */,
 				EAC30F462BC4E7F400A3CB16 /* CustomNavigationBarApp.swift */,
 				EAC30F4A2BC4E7F500A3CB16 /* Assets.xcassets */,
@@ -80,17 +78,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		EAC30F542BC4E84600A3CB16 /* CustomNavBar */ = {
+		EAC30F542BC4E84600A3CB16 /* GTNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				EAC30F552BC4E85900A3CB16 /* AppNavBarView.swift */,
-				EAC30F5B2BC4F93E00A3CB16 /* CustomNavView.swift */,
-				EAC30F592BC4F30A00A3CB16 /* CustomNavBarContainerView.swift */,
-				EAC30F572BC4ED1900A3CB16 /* CustomNavBarView.swift */,
-				EAC30F5D2BC4FB9800A3CB16 /* CustomNavLink.swift */,
-				EAC30F5F2BC5001500A3CB16 /* CustomNavBarPreferenceKeys.swift */,
+				EAC30F5B2BC4F93E00A3CB16 /* GTNavigationView.swift */,
+				EAC30F592BC4F30A00A3CB16 /* GTNavigationBarContainerView.swift */,
+				EAC30F572BC4ED1900A3CB16 /* GTNavBarView.swift */,
+				EAC30F5D2BC4FB9800A3CB16 /* GTNavigationLink.swift */,
+				EAC30F5F2BC5001500A3CB16 /* GTNavBarPreferenceKeys.swift */,
 			);
-			path = CustomNavBar;
+			path = GTNavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,14 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC30F582BC4ED1900A3CB16 /* CustomNavBarView.swift in Sources */,
-				EAC30F5A2BC4F30A00A3CB16 /* CustomNavBarContainerView.swift in Sources */,
+				EAC30F582BC4ED1900A3CB16 /* GTNavBarView.swift in Sources */,
+				EAC30F5A2BC4F30A00A3CB16 /* GTNavigationBarContainerView.swift in Sources */,
 				EAC30F622BC5436200A3CB16 /* ContentView.swift in Sources */,
-				EAC30F5E2BC4FB9800A3CB16 /* CustomNavLink.swift in Sources */,
+				EAC30F5E2BC4FB9800A3CB16 /* GTNavigationLink.swift in Sources */,
 				EAC30F472BC4E7F400A3CB16 /* CustomNavigationBarApp.swift in Sources */,
-				EAC30F562BC4E85900A3CB16 /* AppNavBarView.swift in Sources */,
-				EAC30F602BC5001500A3CB16 /* CustomNavBarPreferenceKeys.swift in Sources */,
-				EAC30F5C2BC4F93E00A3CB16 /* CustomNavView.swift in Sources */,
+				EAC30F602BC5001500A3CB16 /* GTNavBarPreferenceKeys.swift in Sources */,
+				EAC30F5C2BC4F93E00A3CB16 /* GTNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

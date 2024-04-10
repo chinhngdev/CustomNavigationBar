@@ -1,13 +1,13 @@
 //
-//  CustomNavLink.swift
-//  CustomNavigationBar
+//  GTNavigationLink.swift
+//  GTNavigationBar
 //
 //  Created by ChinhNT on 9/4/24.
 //
 
 import SwiftUI
 
-struct CustomNavLink<Label: View, Destination: View>: View {
+struct GTNavigationLink<Label: View, Destination: View>: View {
 
     let destination: Destination
     let label: Label
@@ -19,7 +19,7 @@ struct CustomNavLink<Label: View, Destination: View>: View {
 
     var body: some View {
         NavigationLink {
-            CustomNavBarContainerView {
+            GTNavigationBarContainerView {
                 destination
             }
             .navigationBarHidden(true)
@@ -31,8 +31,8 @@ struct CustomNavLink<Label: View, Destination: View>: View {
 }
 
 #Preview {
-    CustomNavView {
-        CustomNavLink(destination: Text("Destination")) {
+    GTNavigationView {
+        GTNavigationLink(destination: Text("Destination")) {
             Text("Click me")
         }
     }

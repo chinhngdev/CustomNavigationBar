@@ -1,6 +1,6 @@
 //
-//  CustomNavBarPreferenceKeys.swift
-//  CustomNavigationBar
+//  GTNavBarPreferenceKeys.swift
+//  GTNavigationBar
 //
 //  Created by ChinhNT on 9/4/24.
 //
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CustomNavBarTitlePreferenceKey: PreferenceKey {
+struct GTNavBarTitlePreferenceKey: PreferenceKey {
     static var defaultValue: String = ""
 
     static func reduce(value: inout String, nextValue: () -> String) {
@@ -16,7 +16,7 @@ struct CustomNavBarTitlePreferenceKey: PreferenceKey {
     }
 }
 
-struct CustomNavBarBackButtonHiddenPreferenceKey: PreferenceKey {
+struct GTNavBarBackButtonHiddenPreferenceKey: PreferenceKey {
     static var defaultValue: Bool = false
 
     static func reduce(value: inout Bool, nextValue: () -> Bool) {
@@ -27,14 +27,13 @@ struct CustomNavBarBackButtonHiddenPreferenceKey: PreferenceKey {
 extension View {
 
     func customNavigationTitle(_ title: String) -> some View {
-        preference(key: CustomNavBarTitlePreferenceKey.self, value: title)
+        preference(key: GTNavBarTitlePreferenceKey.self, value: title)
     }
 
     func customNavigationBarBackButtonHidden(_ hidden: Bool) -> some View {
-        preference(key: CustomNavBarBackButtonHiddenPreferenceKey.self, value: hidden)
+        preference(key: GTNavBarBackButtonHiddenPreferenceKey.self, value: hidden)
     }
 
-    // for fun
     func customNavBarItems(title: String = "", subtitle: String? = nil, backButtonHidden: Bool = false) -> some View {
         self.customNavigationTitle(title)
             .customNavigationBarBackButtonHidden(backButtonHidden)
